@@ -1,0 +1,20 @@
+.time {
+  margin-top: 20px;
+  color: white;
+  font-size: 150px;
+  font-family: Marker Felt, fantasy;
+}
+
+.date {
+  margin-top: 50px;
+  color: white;
+  font-size: 30px;
+  font-family: Marker Felt, fantasy;
+}
+
+.wish {
+  margin-top: 100px;
+  color: white;
+  font-size: 60px;
+  font-family: Marker Felt, fantasy;
+}

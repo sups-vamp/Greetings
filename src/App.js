@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Greetingheader from './Components/greetingheader';
 
 function App() {
+
+let time = () => {
+  time = new Date();
+  time = `${time.getHours()} : ${time.getMinutes()} : ${time.getSeconds()}`;
+
+  return time;
+}
+
+let date = () => {
+let date = new Date();
+date = `${date.toDateString()}`;
+
+return date;
+}
+  const greetingcal = () => {
+    const dates = new Date();
+    if (dates.getHours() < 12)   
+    return "Good Morning!";
+    else if (dates.getHours() >= 12 && dates.getHours < 19 )
+    return "Good Afternoon!";
+    else
+    return "Good Evening!";
+    
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greetingheader wish = {greetingcal()} time={time()} date={date()} />
     </div>
   );
 }
